@@ -1,6 +1,6 @@
 # forChris
 
-+ [plot1](https://bcaffo.github.io/forChris/plot1.html)
-+ [plot2](https://bcaffo.github.io/forChris/plot2.html)
-+ [plot3](https://bcaffo.github.io/forChris/plot3.html)
-+ 
++ [just the smoothed data](https://bcaffo.github.io/forChris/plot1.html)
++ [smoothed data plus schematic](https://bcaffo.github.io/forChris/plot2.html)
++ [just the schematic](https://bcaffo.github.io/forChris/plot3.html)
++ [just showing where the leafs project onto](https://bcaffo.github.io/forChris/plot3.html)
