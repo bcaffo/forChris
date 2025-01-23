@@ -1,0 +1,35 @@
+#@title create the plot
+#channel_mapping_str = [str(x) for x in channel_mapping]
+## Note we're putting all of the labels on for this plot
+channel_mapping_str = [str(x) for x in range(16)]
+
+## Get the interpoplated data
+fudge = 1.05
+fudge2 = 1.2
+fig = go.Figure(data = [
+        go.Surface(x = zx_surface , y = zy_surface , z = zz_surface, surfacecolor = ivals, cmin = 0, cmax = 6),
+## Use this if you want only the points used in the smoothing
+##        go.Scatter3d(x = xx * fudge, y = xy * fudge, z = xz * fudge,
+        ## Use this if you want all points (but the smoothing only uses the valid electrodes)
+        go.Scatter3d(x = xx_all * fudge, y = xy_all * fudge, z = xz_all * fudge,
+                mode ='markers',
+                marker=dict(size=10, color='black'),
+                     showlegend=False
+                ),
+        go.Scatter3d(x = xx_all * fudge2, y = xy_all * fudge2, z = xz_all * fudge2,
+                mode ='text',
+                text = channel_mapping_str,
+                textposition='top center',
+                     showlegend=False
+                )
+
+        ]
+    )
+
+fig.update_layout(scene=dict(
+    xaxis=dict(showbackground=False, showticklabels=False, title=''),
+    yaxis=dict(showbackground=False, showticklabels=False, title=''),
+    zaxis=dict(showbackground=False, showticklabels=False, title='')
+    )
+)
+fig.update_layout(width=800, height=800)
